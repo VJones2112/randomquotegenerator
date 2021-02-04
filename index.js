@@ -9,6 +9,6 @@ const generateQuote = () => {
     }
 }
 
-$( "#new-quote" ).click(generateQuote);
-$( document ).ready(generateQuote);
+$("#new-quote").click(generateQuote);
+$(document).ready(generateQuote);
 document.addEventListener("keydown", generateQuote);

@@ -3,18 +3,20 @@
 body {
     text-align: center;
     font-size: 16px;
-    max-width: 575px;
     margin: 0 auto;
     font-family: 'Hachi Maru Pop', cursive;
     background: url('images/glitch.png');
     background-position: center;
+    background-attachment: fixed;
 }
 
 #quote-box {
     margin-top: 2rem;
     background: url('images/chalkboard.jpg');
+    max-width: 575px;
     color: #fff;
     border-radius: 1rem;
+    box-shadow: 5px 5px 5px 1px rgba(0,0,0,0.61);
 } 
 
 #text, 
@@ -30,6 +32,7 @@ body {
 #author { 
     font-size: 1.5rem; 
     text-align: right;
+    padding-right: 1.2rem;
 }
 #author::before { content: "\02013"; }
  
@@ -42,7 +45,6 @@ button {
     border: 2px solid #000;
     margin: 0.5rem 0;
 }
-
 #new-quote:hover {
     background-color:rgba(0, 0, 0, 0.468);
     background-blend-mode: darken;
@@ -53,11 +55,17 @@ button {
     border-radius: 1rem;
 }    
 
-.imageAttributes { margin: 1rem 0; }
+.imageAttributes { margin: 0.5rem 0; line-height: 1.4rem;}
 .imageAttributes,
-.imageAttributes a {
+.imageAttributes > a {
     color: #fff;
     font-size: 0.75rem;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.4s ease-in-out;
+}
+.imageAttributes > a:hover {
+    border-bottom: 1px solid rgb(240,240,194);
 }
 
 .social a { color: #000; }
